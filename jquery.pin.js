@@ -64,7 +64,13 @@
                     end: containerOffset.top + $container.height(),
                     parentTop: parentOffset.top
                 });
-
+                
+                // 初始化元素状态
+                $this.css({
+                    width: '',
+                    position: ''
+                });
+                
                 $this.css({
                     width: $this.outerWidth()
                 });
