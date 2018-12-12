@@ -40,7 +40,15 @@
                 {
                     disabled = false;
                 }
-
+                
+                // 初始化元素状态
+                $this.css({
+                    width: '',
+                    left: '',
+                    top: '',
+                    position: ''
+                });
+                
                 var $container = options.containerSelector ? $this.closest(options.containerSelector) : $(document.body);
                 var offset = $this.offset();
                 var containerOffset = $container.offset();
@@ -63,12 +71,6 @@
                     to: containerOffset.top + $container.height() - $this.outerHeight() - pad.bottom,
                     end: containerOffset.top + $container.height(),
                     parentTop: parentOffset.top
-                });
-                
-                // 初始化元素状态
-                $this.css({
-                    width: '',
-                    position: ''
                 });
                 
                 $this.css({
